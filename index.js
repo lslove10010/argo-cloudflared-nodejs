@@ -511,7 +511,7 @@ const server = createServer((req, res) => {
   if (pathname === `/${config.SUB_PATH}`) {
     const address = tunnelDomain || 'www.visakorea.com';
     const sniHost = publicHost;
-    const vless = `vless://${config.UUID}@${address}:443?encryption=none&security=tls&sni=${sniHost}&fp=chrome&type=ws&host=${sniHost}&path=${encodeURIComponent(config.wsPath)}#${encodeURIComponent(config.REMARKS || (tunnelDomain ? 'Argo-VLESS' : 'VLESS'))}`;
+    const vless = `vless://${config.UUID}@www.visakorea.com:443?encryption=none&security=tls&sni=${sniHost}&fp=chrome&type=ws&host=${sniHost}&path=${encodeURIComponent(config.wsPath)}#${encodeURIComponent(config.REMARKS || (tunnelDomain ? 'Argo-VLESS' : 'VLESS'))}`;
     const encoded = Buffer.from(vless).toString('base64');
     res.writeHead(200, {
       'Content-Type': 'text/plain; charset=utf-8',
