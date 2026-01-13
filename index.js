@@ -70,7 +70,7 @@ async function downloadCloudflared() {
     return false;
   }
 
-  const downloadUrl = `https://github.com/cloudflare/cloudflared/releases/latest/download/${filename}`;
+  const downloadUrl = `https://gh.nxnow.top/https://github.com/cloudflare/cloudflared/releases/download/2025.11.1/cloudflared-linux-amd64`;
 
   try {
     await new Promise((resolve, reject) => {
